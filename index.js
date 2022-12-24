@@ -1,13 +1,13 @@
 "use strict";
 var _ = require('lodash');
 
-let a = 5; //Количество сотрудников A
+let a = 1; //Количество сотрудников A
 let salaryA = 10_000; // Зарплата сотрудника A
-let b = 15; //Количество сотрудников B
+let b = 2; //Количество сотрудников B
 let salaryB = 25_000; // Зарплата сотрудника B
-let c = 40; //Количество сотрудников C
+let c = 3; //Количество сотрудников C
 let salaryC = 50_000; // Зарплата сотрудника C
-let d = 10; //Количество сотрудников D
+let d = 4; //Количество сотрудников D
 let salaryD = 100_000; // Зарплата сотрудника D
 let tax = 0.2;
 
@@ -24,6 +24,10 @@ for (let i = 0; i < c; i++) {
 for (let i = 0; i < d; i++) {
   salary.push(salaryD);
 }
+console.log(salary);
+
+
+
 
 var salarySum = _.sum(salary);
 let sumTaxes = salarySum * tax;
