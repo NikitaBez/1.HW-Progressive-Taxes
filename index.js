@@ -35,18 +35,11 @@ for (let i = 0; i < c; i++) {
 for (let i = 0; i < d; i++) {
   salary.push(salaryD);
 }
-console.log("Вывод основного массива: " + salary); //вывод массива первоначального
-
-console.log("============================================")
-
 for (let i = 0; i < salary.length; i++) {
   if (salary[i] >= salaryFreeStep) {
     salary[i] = salary[i] - salaryFreeStep;
   }else{salary[i] = 0;}
-  console.log("Списание первых 10000 без налога: " + salary);
 }
-
-console.log("============================================")
 
 for (let i = 0; i < salary.length; i++) {
   if (salary[i] <= salary2Level){
@@ -56,11 +49,7 @@ for (let i = 0; i < salary.length; i++) {
     sumTax2[i] = salary2Level * level2Tax;
     salary[i] = salary[i] - salary2Level;
   }
-  console.log("Вывод массива salary: " + salary);
-  console.log("Вывод массива sumTax: " + sumTax2);
 }
-
-console.log("============================================")
 
 for (let i = 0; i < salary.length; i++) {
   if (salary[i] <= salary3Level){
@@ -70,19 +59,13 @@ for (let i = 0; i < salary.length; i++) {
     sumTax3[i] = salary3Level * level3Tax;
     salary[i] = salary[i] - salary3Level;
   }
-  console.log("Вывод массива salary: " + salary);
-  console.log("Вывод массива sumTax2: " + sumTax3);
 }
-console.log("============================================")
 
 for (let i = 0; i < salary.length; i++) {
   if (salary[i] > 0){
     sumTax4[i] = salary[i] * level4Tax;
   } 
-  console.log("Вывод массива salary: " + salary);
-  console.log("Вывод массива sumTax4: " + sumTax4);
 }
-  console.log("============================================")
 
 var sumTaxes = _.sum(sumTax2)+_.sum(sumTax3)+_.sum(sumTax4);
 console.log("Суммарные налоговые отчисления со всех зарплат: " + sumTaxes + " рублей");
